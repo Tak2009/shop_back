@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  qty: MyString
+  uprice: MyString
+  ucost: MyString
+
+two:
+  type: 
+  qty: MyString
+  uprice: MyString
+  ucost: MyString
