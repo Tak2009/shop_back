@@ -6,6 +6,7 @@ class CreateSales < ActiveRecord::Migration[6.0]
       t.references :bicycle, null: false, foreign_key: true
       t.integer :qtysold
       t.integer :valuesold
+      t.integer :costsold
 
       t.timestamps
     end

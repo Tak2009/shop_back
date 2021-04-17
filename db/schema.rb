@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_103657) do
     t.integer "bicycle_id", null: false
     t.integer "qtysold"
     t.integer "valuesold"
+    t.integer "costsold"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bicycle_id"], name: "index_sales_on_bicycle_id"
