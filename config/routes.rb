@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :purchasessimulations
+  resources :salessimulations
   resources :cashes
   resources :purchases
   resources :sales

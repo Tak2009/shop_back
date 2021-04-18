@@ -1,3 +1,3 @@
-class CashSerializer < ActiveModel::Serializer
-  attributes :id, :date, :bal, :created_at, :updated_at
+class BicycleSerializer < ActiveModel::Serializer
+  attributes :id, :bitype, :qty, :uprice, :ucost, :created_at, :updated_at
 end

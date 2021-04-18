@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_103657) do
+ActiveRecord::Schema.define(version: 2021_04_18_093448) do
 
   create_table "bicycles", force: :cascade do |t|
     t.string "bitype"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(version: 2021_04_17_103657) do
     t.index ["bicycle_id"], name: "index_purchases_on_bicycle_id"
   end
 
+  create_table "purchasessimulations", force: :cascade do |t|
+    t.date "date1"
+    t.date "date2"
+    t.integer "bicycle_id", null: false
+    t.integer "qtybought"
+    t.integer "valuebought"
+    t.date "finishdate"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bicycle_id"], name: "index_purchasessimulations_on_bicycle_id"
+  end
+
   create_table "sales", force: :cascade do |t|
     t.date "date1"
     t.date "date2"
@@ -52,6 +64,20 @@ ActiveRecord::Schema.define(version: 2021_04_17_103657) do
     t.index ["bicycle_id"], name: "index_sales_on_bicycle_id"
   end
 
+  create_table "salessimulations", force: :cascade do |t|
+    t.date "date1"
+    t.date "date2"
+    t.integer "bicycle_id", null: false
+    t.integer "qtysold"
+    t.integer "valuesold"
+    t.integer "costsold"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bicycle_id"], name: "index_salessimulations_on_bicycle_id"
+  end
+
   add_foreign_key "purchases", "bicycles"
+  add_foreign_key "purchasessimulations", "bicycles"
   add_foreign_key "sales", "bicycles"
+  add_foreign_key "salessimulations", "bicycles"
 end
