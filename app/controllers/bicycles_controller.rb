@@ -1,7 +1,7 @@
 class BicyclesController < ApplicationController
 
     def index
-        bicycles = Sale.all
+        bicycles = Bicycle.all
         render json: bicycles
     end
 

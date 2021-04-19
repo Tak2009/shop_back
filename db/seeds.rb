@@ -9,7 +9,7 @@ cash_31032021 = Cash.create(:date => "2021-03-31", :bal => 10000)
 
 bi_1 = Bicycle.create(:bitype => "A", :qty => 50, :uprice => 100, :ucost => 60)
 bi_2 = Bicycle.create(:bitype => "B", :qty => 20, :uprice => 300, :ucost => 100)
-bi_3 = Bicycle.create(:bitype => "C", :qty => 20, :uprice => 800, :ucost => 200)
+bi_3 = Bicycle.create(:bitype => "C", :qty => 30, :uprice => 800, :ucost => 200)
 
 sale_1 = Sale.create(date1: "2021-01-10", date2: "2021-01-12", bicycle_id: bi_1.id, qtysold: 100, valuesold: 0, costsold: 0)
 sale_1.update(:valuesold => sale_1.qtysold * Bicycle.find(sale_1.bicycle_id).uprice, :costsold => sale_1.qtysold * Bicycle.find(sale_1.bicycle_id).ucost)
