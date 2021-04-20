@@ -35,8 +35,11 @@ purchase_2.update(:valuebought => purchase_2.qtybought * Bicycle.find(purchase_2
 purchase_3 = Purchase.create(date1: "2021-03-20", date2: "2021-03-22", bicycle_id: bi_3.id, qtybought: 30, valuebought: 0, finishdate: "")
 purchase_3.update(:valuebought => purchase_3.qtybought * Bicycle.find(purchase_3.bicycle_id).ucost, :finishdate => purchase_3.date2 + 15)
 
-salesimulation_1 = Salessimulation.create(date1: "2021-04-18", date2: "2021-04-20", bicycle_id: bi_1.id, qtysold: 1, valuesold: 0, costsold: 0)
+salesimulation_1 = Salessimulation.create(date1: "2021-04-28", date2: "2021-04-30", bicycle_id: bi_1.id, qtysold: 30, valuesold: 0, costsold: 0)
 salesimulation_1.update(:valuesold => salesimulation_1.qtysold * Bicycle.find(salesimulation_1.bicycle_id).uprice, :costsold => salesimulation_1.qtysold * Bicycle.find(salesimulation_1.bicycle_id).ucost)
 
-purchasessimulation_1 = Purchasessimulation.create(date1: "2021-04-18", date2: "2021-04-20", bicycle_id: bi_1.id, qtybought: 5, valuebought: 0, finishdate: "")
-purchasessimulation_1.update(:valuebought => purchasessimulation_1.qtybought * Bicycle.find(purchasessimulation_1.bicycle_id).ucost, :finishdate => purchasessimulation_1.date2 + 15)
+# purchasessimulation_1 = Purchasessimulation.create(date1: "2021-05-04", date2: "2021-05-06", bicycle_id: bi_1.id, qtybought: 5, valuebought: 0, finishdate: "")
+# purchasessimulation_1.update(:valuebought => purchasessimulation_1.qtybought * Bicycle.find(purchasessimulation_1.bicycle_id).ucost, :finishdate => purchasessimulation_1.date2 + 15)
+
+salesimulation_2 = Salessimulation.create(date1: "2021-05-04", date2: "2021-05-06", bicycle_id: bi_3.id, qtysold: 10, valuesold: 0, costsold: 0)
+salesimulation_2.update(:valuesold => salesimulation_2.qtysold * Bicycle.find(salesimulation_2.bicycle_id).uprice, :costsold => salesimulation_2.qtysold * Bicycle.find(salesimulation_2.bicycle_id).ucost)
